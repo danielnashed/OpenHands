@@ -54,7 +54,7 @@ class DPC_RNN_Pretrainer(nn.Module):
         pred_steps=3,
         in_channels=2,
         hidden_dim=256,
-        encoder,
+        encoder=None,
     ):
         super().__init__()
         
@@ -193,7 +193,7 @@ class DPC_RNN_Finetuner(nn.Module):
         pred_steps=2,
         in_channels=2,
         hidden_dim=256,
-        encoder,
+        encoder=None,
         # graph_args={"layout": "mediapipe-27", "strategy": "spatial"},
     ):
         super().__init__()
